@@ -20,6 +20,12 @@ func HandleErr(err error, prefix string) {
 	}
 }
 
+func PanicErr(err error){
+	if err != nil {
+		panic(err)
+	}
+}
+
 func GetBytesFromUint16(source []byte, num uint16) {
 	source[0] = byte(num >> 8)
 	source[1] = byte(num)
